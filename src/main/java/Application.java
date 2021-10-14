@@ -5,14 +5,17 @@ public class Application {
 
         for (int i = 1; i <= 100; i++) {
 
-            if (FizzBuzz.FIZZ.isDisplayOn(i))
+            if (FizzBuzz.FIZZ.isDisplayOn(i)) {
                 fizzBuzzBuilder.build(FizzBuzz.FIZZ.name());
-
-            else if (FizzBuzz.BUZZ.isDisplayOn(i))
+            }
+            if (FizzBuzz.BUZZ.isDisplayOn(i)) {
                 fizzBuzzBuilder.build(FizzBuzz.BUZZ.name());
-
-            else
+            }
+            if (FizzBuzz.NONE.isDisplayOn(i)) {
                 fizzBuzzBuilder.build(i);
+            }
+
+            fizzBuzzBuilder.build(" - ");
         }
 
         fizzBuzzBuilder.display();
